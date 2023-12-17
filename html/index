@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Would you go out with me?</title>
+</head>
+<body>
+  <h1>Would you go out with me?</h1>
+  <img src="https://pbs.twimg.com/media/FwsqAqeXsAEdZEH.jpg">
+  <p>Please enter your response:</p>
+  <form action="#" onsubmit="return showImage();">
+    <label for="response">Response:</label><br>
+    <input type="text" id="response" name="response"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <div id="resultImage" style="display: none;">
+    <img src="https://media.tenor.com/QWSXGYQHn4oAAAAM/yippee-iluvmybf.gif">
+  </div>
+
+  <script>
+    function showImage() {
+      var response = document.getElementById("response").value.toLowerCase();
+      if (response === "yes") {
+        document.getElementById("resultImage").style.display = "block";
+        return false; // To prevent the form from submitting and the page from refreshing
+      }
+      return true; // Allow form submission for other responses
+    }
+  </script>
+</body>
+</html>
